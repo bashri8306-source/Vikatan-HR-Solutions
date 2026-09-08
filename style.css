@@ -1,0 +1,311 @@
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#111;
+line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#0a9b36;
+}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#111;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#0a9b36;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:#fff;
+padding:12px 26px;
+border-radius:12px;
+transition:.3s;
+display:inline-block;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* ================= HERO ================= */
+.hero{
+padding:120px 8%;
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:50px;
+
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+
+background-size:cover;
+background-position:center;
+color:#fff;
+}
+
+.hero-text h1{font-size:60px;}
+.hero-text span{color:#22c55e;}
+.hero-text p{margin:20px 0;color:#ddd;}
+
+/* ================= SECTION BASE ================= */
+.section{
+padding:100px 8%;
+position:relative;
+overflow:hidden;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+font-weight:800;
+}
+
+.title::after{
+content:"";
+width:70px;
+height:4px;
+background:#22c55e;
+display:block;
+margin:10px auto;
+border-radius:5px;
+}
+
+/* ================= ABOUT (PROFESSIONAL DARK NAVY) ================= */
+#about{
+background:linear-gradient(135deg,#0b1220,#111827,#0f172a);
+color:#fff;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.about-content{flex:1;}
+.about-img{flex:1;text-align:center;}
+
+.about-img img{
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+/* ================= SERVICES (DIFFERENT DARK PREMIUM) ================= */
+#services{
+background:radial-gradient(circle at top left,#0f172a,#020617);
+color:#fff;
+position:relative;
+}
+
+/* glow effect */
+#services::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:linear-gradient(135deg,#22c55e,#3b82f6);
+filter:blur(120px);
+opacity:0.15;
+top:-100px;
+right:-100px;
+}
+
+#services .title{
+color:#fff;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+position:relative;
+z-index:2;
+}
+
+.service-card{
+padding:25px;
+border-radius:16px;
+color:#fff;
+text-align:center;
+font-weight:600;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* 8 service colors */
+.service-card:nth-child(1){background:linear-gradient(135deg,#22c55e,#16a34a);}
+.service-card:nth-child(2){background:linear-gradient(135deg,#3b82f6,#1d4ed8);}
+.service-card:nth-child(3){background:linear-gradient(135deg,#f97316,#ea580c);}
+.service-card:nth-child(4){background:linear-gradient(135deg,#ec4899,#be185d);}
+.service-card:nth-child(5){background:linear-gradient(135deg,#8b5cf6,#6d28d9);}
+.service-card:nth-child(6){background:linear-gradient(135deg,#14b8a6,#0f766e);}
+.service-card:nth-child(7){background:linear-gradient(135deg,#eab308,#ca8a04);}
+.service-card:nth-child(8){background:linear-gradient(135deg,#64748b,#334155);}
+
+.service-card:hover{
+transform:translateY(-8px) scale(1.03);
+}
+
+/* ================= COURSES (LIGHT CLEAN) ================= */
+#courses{
+background:linear-gradient(135deg,#f8fafc,#eef2ff,#f0fdf4);
+}
+
+.courses-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.course-box{
+background:#fff;
+padding:25px;
+border-radius:20px;
+min-height:220px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.course-box:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* course colors */
+.course-box:nth-child(1){background:#dcfce7;}
+.course-box:nth-child(2){background:#cffafe;}
+.course-box:nth-child(3){background:#ede9fe;}
+.course-box:nth-child(4){background:#ffedd5;}
+.course-box:nth-child(5){background:#dbeafe;}
+.course-box:nth-child(6){background:#fce7f3;}
+.course-box:nth-child(7){background:#e2e8f0;}
+
+/* ================= CONTACT ================= */
+#contact{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1551836022-d5d88e9218df');
+background-size:cover;
+background-position:center;
+color:#fff;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.round-box{
+background:rgba(255,255,255,0.9);
+padding:25px;
+border-radius:20px;
+text-align:center;
+color:#111;
+}
+
+/* ================= REGISTER ================= */
+#register{
+background:linear-gradient(135deg,#0a9b36,#22c55e);
+color:#fff;
+position:relative;
+overflow:hidden;
+}
+
+.contact-box{
+max-width:650px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:20px;
+color:#111;
+}
+
+/* INPUT */
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+.main-footer{
+background:#111827;
+color:#fff;
+padding:50px 20px;
+text-align:center;
+}
+
+.footer-container{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.footer-item{
+background:#1f2937;
+padding:20px;
+border-radius:12px;
+min-width:150px;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:16px;
+border-radius:50%;
+font-size:22px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+.hero-text h1{font-size:38px;}
+.about-container{flex-direction:column;}
+}
